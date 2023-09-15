@@ -50,6 +50,9 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+console.log("------------")
+console.log("The section below is when I added all of the acers that were picked in the last 7 Days.")
+console.log("------------")
 
 let totalFuji = 0;
 let totalGala = 0;
@@ -76,6 +79,7 @@ for (i = 0; i < pinkAcres.length; i++) {
 
 let totalAcres = totalFuji + totalGala + totalPink;
 console.log(totalAcres);
+
 
 
 
@@ -111,10 +115,14 @@ console.log(totalAcres);
 */
 
 // CODE HERE
+console.log("------------")
+console.log("This section below is when I took the total acres that were picked and averaged then between the different kinds of apples.")
+console.log("------------")
 
 
 let averageDailyAcres = totalAcres / 3;
 console.log(averageDailyAcres);
+
 
 
 //I thought about having a divide by array.length thing instead of just having divided by 3. But then I figured that I would need to have arrays inside of arrays... and I don't know how to do that yet.
@@ -159,6 +167,11 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
+console.log("------------")
+console.log("This section below is when I figured out how many days it would take to pick all of the apples in all of the acres.")
+console.log("------------")
+
+
 
 while (acresLeft > 0) {
 
@@ -168,6 +181,7 @@ while (acresLeft > 0) {
 }
 
 console.log(days)
+
 
 
 
@@ -204,19 +218,22 @@ console.log(days)
 */
 
 // CODE HERE
+console.log("------------")
+console.log("This section below is where I figured out how many tons of apples were picked in each orchard.")
+console.log("------------")
+
 
 let fujiCopy = fujiAcres.slice();
 let galaCopy = galaAcres.slice();
 let pinkCopy = pinkAcres.slice();
 
-let fujiFake = [];
-let galaFake = [];
-let pinkFake = [];
 
-let fujiTons = 0;
-let galaTons = 0;
-let pinkTons = 0;
+let fujiTons = [];
+let galaTons = [];
+let pinkTons = [];
 
+
+//Math for Fuji below
 
 for (i = 0; i < fujiCopy.length; i++){
     let fujiMath = fujiCopy[i];
@@ -224,11 +241,63 @@ for (i = 0; i < fujiCopy.length; i++){
     fujiMath = fujiMath * 6.5;
     // console.log(fujiMath);
     
-    fujiFake.push(fujiMath);
+    fujiTons.push(fujiMath);
 }
+// console.log(fujiTons);
 
 
-console.log(fujiFake);
+//Math for Fuji above
+
+
+//Math for Gala below
+
+for (i = 0; i < galaCopy.length; i++){
+    let galaMath = galaCopy[i];
+
+    galaMath = galaMath * 6.5;
+    // console.log(galaMath);
+    
+    galaTons.push(galaMath);
+}
+// console.log(galaTons);
+
+
+
+//Math for Gala above
+
+//Math for Pink below
+
+for (i = 0; i < pinkCopy.length; i++){
+    let pinkMath = pinkCopy[i];
+
+    pinkMath = pinkMath * 6.5;
+    // console.log(pinkMath);
+    
+    pinkTons.push(pinkMath);
+}
+// console.log(pinkTons);
+
+
+
+//Math for Pink above
+
+//Outputs below
+
+console.log(fujiTons);
+console.log("------------")
+console.log(galaTons);
+console.log("------------")
+console.log(pinkTons);
+
+//Outputs above
+
+
+
+
+
+//OK... So,
+//It took me quite a while to figure out how to multiply 6.5 to each item in the array and then take that number and push it to an array.
+//I tested out a lot of ways to do it and ran into a lot of errors and infinite loops. But once I figured fuji out I just copied and pasted it then changed the variables to match the gala and pink orchards.
 
 
 
@@ -253,18 +322,57 @@ console.log(fujiFake);
 */
 
 // CODE HERE 
-
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
-
+console.log("------------")
+console.log("This section below is were I took the tons of apples from each orchard and added them up. Then I converted that amount into pounds.")
+console.log("------------")
 
 
 
+let fujiTotalTons = 0;
+let galaTotalTons = 0;
+let pinkTotalTons = 0;
+
+let fujiPounds = 0;
+let galaPounds = 0;
+let pinkPounds = 0;
 
 
 
+for (i = 0; i < fujiTons.length; i++) {
+    fujiTotalTons = fujiTotalTons + fujiTons[i]
+    
+}
 
+
+for (i = 0; i < galaTons.length; i++) {
+    galaTotalTons = galaTotalTons + galaTons[i]
+    
+}
+
+for (i = 0; i < pinkTons.length; i++) {
+    pinkTotalTons = pinkTotalTons + pinkTons[i]
+    
+}
+
+
+fujiPounds = fujiTotalTons * 2000;
+galaPounds = galaTotalTons * 2000;
+pinkPounds = pinkTotalTons * 2000;
+
+console.log(fujiTotalTons);
+console.log(galaTotalTons);
+console.log(pinkTotalTons);
+
+console.log("------------")
+
+console.log(fujiPounds);
+console.log(galaPounds);
+console.log(pinkPounds);
+
+
+
+//Part of what took so long in problem 4 is because I actually did part of problem 5 as well as problem 4 at the same time. In problem 4 I also took the ____Tons array and added them all together.
+//So I just seperated what I did in problem 4 into 4 and 5 and then I cleaned up both and make the variables easier for me to understand. Then I added in the math to turn the ____TotalTons array into the ____Pound number.
 
 
 
@@ -285,20 +393,31 @@ console.log(fujiFake);
 */
 
 // CODE HERE
-
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
-
+console.log("------------")
+console.log("This section below is where I figured out how much money all of the apples were worth. (seperated by the type of apple)")
+console.log("------------")
 
 
-
-
-
+let fujiProfit = 0;
+let galaProfit = 0;
+let pinkProfit = 0;
 
 
 
+fujiProfit = fujiPounds * fujiPrice;
+galaProfit = galaPounds * galaPrice;
+pinkProfit = pinkPounds * pinkPrice;
 
+
+console.log(fujiProfit);
+console.log("------------")
+console.log(galaProfit);
+console.log("------------")
+console.log(pinkProfit);
+
+
+//I just did the same thing that I did in the last problem but instead of multiplying Tons by 2000, I just multiplied Pounds by Price.
+//I did have a small problem though, I console.logged the Price instead of the Profit... I don't want to tell you how long that went unnoticed.
 
 
 // PROBLEM 7
@@ -312,8 +431,20 @@ console.log(fujiFake);
 */
 
 // CODE HERE
+console.log("------------")
+console.log("This section below is where I added up all of the profits from each type of apple to find out the total price.")
+console.log("------------")
 
 
+let totalProfit = 0;
+
+totalProfit = fujiProfit + galaProfit + pinkProfit;
+
+console.log(totalProfit);
+
+
+//I just added all of the Profit's to get the Total Profit.
+//The last two questions were pretty simple, especially after getting though problems 4 and 5.
 
 
 
