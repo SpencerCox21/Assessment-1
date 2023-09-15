@@ -51,10 +51,47 @@ const pinkPrice = .55
 
 // CODE HERE
 
+let totalFuji = 0;
+let totalGala = 0;
+let totalPink = 0;
+
+for (i = 0; i < fujiAcres.length; i++) {
+    totalFuji = totalFuji + fujiAcres[i]
+    // console.log(totalFuji);
+}
+
+for (i = 0; i < galaAcres.length; i++) {
+    totalGala = totalGala + galaAcres[i]
+    // console.log(totalGala);
+}
+
+for (i = 0; i < pinkAcres.length; i++) {
+    totalPink = totalPink + pinkAcres[i];
+    // console.log(totalPink);
+}
+
+// console.log(totalFuji);
+// console.log(totalGala);
+// console.log(totalPink);
+
+let totalAcres = totalFuji + totalGala + totalPink;
+console.log(totalAcres);
 
 
 
+//For problem 1 I chose to add up each array seperately and then add the results from each array together.
+//I had a little trouble figuring out how to take the numbers in each array and add them together so I found an example code online (www.sololearn.com if you're interested) that example code is just below.
 
+
+// var arr = [1,2,3,4,34,24]
+// var sum = 0;
+// for(i=0;i<arr.length;i++){
+// sum += arr[i];
+// }
+// console.log(sum);
+
+
+//After I verified that I added up each array correctly I just added them together and saved it as a variable. Then just console.log() the new variable.
 
 
 
@@ -76,8 +113,11 @@ const pinkPrice = .55
 // CODE HERE
 
 
+let averageDailyAcres = totalAcres / 3;
+console.log(averageDailyAcres);
 
 
+//I thought about having a divide by array.length thing instead of just having divided by 3. But then I figured that I would need to have arrays inside of arrays... and I don't know how to do that yet.
 
 
 
@@ -120,8 +160,18 @@ let days = 0
 
 // CODE HERE
 
+while (acresLeft > 0) {
+
+    acresLeft = acresLeft - averageDailyAcres;
+
+    days++;
+}
+
+console.log(days)
 
 
+
+//Problem 3 was pretty self explanitory, so I don't know how to explain my thought process asside from "I just did what the problem asked me to do."
 
 
 
@@ -155,13 +205,30 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+let fujiCopy = fujiAcres.slice();
+let galaCopy = galaAcres.slice();
+let pinkCopy = pinkAcres.slice();
+
+let fujiFake = [];
+let galaFake = [];
+let pinkFake = [];
+
+let fujiTons = 0;
+let galaTons = 0;
+let pinkTons = 0;
 
 
+for (i = 0; i < fujiCopy.length; i++){
+    let fujiMath = fujiCopy[i];
+
+    fujiMath = fujiMath * 6.5;
+    // console.log(fujiMath);
+    
+    fujiFake.push(fujiMath);
+}
 
 
+console.log(fujiFake);
 
 
 
