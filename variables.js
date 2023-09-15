@@ -3,7 +3,7 @@
 
 //CODE HERE 
 
-
+let myName = "Spencer Cox";
 
 
 
@@ -15,7 +15,7 @@
 //CODE HERE
 
 
-
+let faveNum = 21;
 
 
 
@@ -28,7 +28,7 @@
 //CODE HERE
 
 
-
+let lovesCode = true;
 
 
 
@@ -43,7 +43,11 @@
 //CODE HERE
 
 
-
+if (faveNum === 13){
+  console.log('lucky number 13!!!')
+} else {
+  console.log("Your favorite number is not lucky number 13. That means that you're cursed to be unlucky forever!")
+}
 
 
 
@@ -56,7 +60,9 @@
 //CODE HERE
 
 
-
+for (i = 0; i < 5; i++){
+  console.log(faveNum);
+}
 
 
 
