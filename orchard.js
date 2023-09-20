@@ -116,11 +116,11 @@ console.log(totalAcres);
 
 // CODE HERE
 console.log("------------")
-console.log("This section below is when I took the total acres that were picked and averaged then between the different kinds of apples.")
+console.log("This section below is when I took the total acres that were picked each day.")
 console.log("------------")
 
 
-let averageDailyAcres = totalAcres / 3;
+let averageDailyAcres = totalAcres / 7;
 console.log(averageDailyAcres);
 
 
